@@ -1,0 +1,39 @@
+!Git notes
+
+apt install git (or yum install git)
+
+$ git config --global user.name "username"
+$ git config --global user.email "username.user@example.com"
+
+#create the rsa ssh keys:
+
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+
+#then copy the content of the ~/.ssh/ip_rsa.pub into the key field in the github
+
+#to check:
+ssh -T git@github.com
+
+
+#init the current directory:
+git init
+
+#tracking of the file:
+git add <filename>
+
+#commit the changes:
+git commit
+
+#push the changes to the github:
+
+git remote add <some_name> git@github.com:frosgart/net.git #change the repo address if needed
+#then
+git push -u <some_name> master
+
+#to clone the repo from the git (copy it to the local pc):
+git clone <repo_address_on_the_github>
+
+#periodicaly sync the repo:
+git pull
+
+
